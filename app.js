@@ -3,7 +3,7 @@ const express = require('express');
 const mysql = require('mysql2');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000
 
 // Configuración de la conexión a la base de datos
 const con = mysql.createConnection({
