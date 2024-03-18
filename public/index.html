@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+        <h1>Inventario</h1>
+        <div class="container">    
+            <button id="leer-datos" class="btn btn-primary">Mostrar Datos</button>
+        </div>
+
+        <div class="container">
+            <table id="tabla-productos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-tabla">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container" id="formularios">
+            <div class="formulario">    
+                <button id="mostrar-formulario-crear" class="btn btn-primary">Agregar item</button>
+                <form id="formulario-crear" style="display: none;">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
+                    <label for="descripcion">Descripción:</label>
+                    <input type="text" id="descripcion" name="descripcion"><br><br>
+                    <label for="precio">Precio:</label>
+                    <input type="number" id="precio" name="precio" min="1" required><br><br>
+                    <label for="stock">Stock:</label>
+                    <input type="number" id="stock" name="stock" min="0" required><br><br>
+                    <button id="agregar-producto">Agregar</button>
+                </form>
+            </div>
+    
+            <div class="formulario">
+                <form id="formularioModificar" class="formulario-modificar" style="display: none;">
+                    <label for="nombreModificar">Nombre:</label>
+                    <input type="text" id="nombreModificar" name="nombreModificar"><br><br>
+                    <label for="descripcionModificar">Descripción:</label>
+                    <input type="text" id="descripcionModificar" name="descripcionModificar"><br><br>
+                    <label for="precioModificar">Precio:</label>
+                    <input type="number" id="precioModificar" name="precioModificar" min="1" required><br><br>
+                    <label for="stockModificar">Stock:</label>
+                    <input type="number" id="stockModificar" name="stockModificar" min="0" required><br><br>
+                    <button id="actualizar-producto" class="btn btn-primary">Actualizar</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
